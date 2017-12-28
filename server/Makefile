@@ -7,4 +7,5 @@ go:
 
 .PHONY: docker
 docker:
-	docker build -t test/server .
+	docker build -t yusuo/testing .
+	docker build -t yusuo/testing -f Dockerfile.alpine .
