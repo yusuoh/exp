@@ -25,6 +25,7 @@ jobs:
       - run: make
 
 workflows:
+  version: 2
   all:
     jobs:
       - build
