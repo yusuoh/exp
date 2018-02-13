@@ -9,7 +9,7 @@ RUN apt-get update
 RUN apt-get install -y apt-utils
 
 # Tools
-RUN apt-get install -y vim git
+RUN apt-get install -y vim
 
 # Bazel
 RUN apt-get install -y openjdk-8-jdk
