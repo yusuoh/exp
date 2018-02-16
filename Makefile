@@ -1,3 +1,5 @@
+# Simple makefile.
+#
 all: deps
 	go build ./...
 
