@@ -27,9 +27,9 @@ RUN wget https://dl.google.com/go/go1.9.4.linux-amd64.tar.gz -O /tmp/go.tar.gz \
 # Git
 RUN apt-get install -y git
 
-# Automake
+# Dev tools
 RUN apt-get install -y libtool cmake realpath m4
-RUN apt-get install -y automake
+RUN apt-get install -y automake clang-format
 
 COPY .vimrc /root/.vimrc
 COPY .bashrc /root/.bashrc
