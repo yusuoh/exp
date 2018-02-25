@@ -34,4 +34,4 @@ RUN apt-get install -y automake clang-format
 COPY .vimrc /root/.vimrc
 COPY .bashrc /root/.bashrc
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/sh", "-c", "while true; do echo hello; sleep 10; done"]
