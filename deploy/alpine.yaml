@@ -10,3 +10,8 @@ spec:
       image: yusuo/alpine:latest
       command: ["/bin/sh"]
       args: ["-c", "while true; do echo hello; sleep 10; done"]
+      securityContext:
+        capabilities:
+          add:
+          - NET_ADMIN
+

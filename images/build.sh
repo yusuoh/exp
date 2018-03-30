@@ -1,1 +1,2 @@
-docker build -t yusuo/ubuntu_dev -f Dockerfile.ubuntu_dev .
+docker build -t yusuo/alpine -f Dockerfile.alpine .
+docker push yusuo/alpine
