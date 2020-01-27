@@ -11,28 +11,15 @@ RUN apt-get install -y apt-utils
 # Tools
 RUN apt-get install -y vim
 
-# Bazel
-RUN apt-get install -y openjdk-8-jdk
-RUN apt-get install -y curl
-RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | tee /etc/apt/sources.list.d/bazel.list \
-&& curl https://bazel.build/bazel-release.pub.gpg | apt-key add - \
-&& apt-get update && apt-get install -y bazel
-
-# Golang
-RUN apt-get install -y wget
-RUN wget https://dl.google.com/go/go1.9.4.linux-amd64.tar.gz -O /tmp/go.tar.gz \
-&& tar -C /usr/local -xzf /tmp/go.tar.gz \
-&& rm /tmp/go.tar.gz
-
 # Git
 RUN apt-get install -y git
 
 # Dev tools
-RUN apt-get install -y libtool cmake realpath m4
+RUN apt-get install -y libtool cmake m4
 RUN apt-get install -y automake clang-format
 
-COPY .vimrc /root/.vimrc
-COPY .bashrc /root/.bashrc
+COPY vimrc /root/.vimrc
+COPY bashrc /root/.bashrc
 
 # Expose ports
 # EXPOSE 22 80 8080
